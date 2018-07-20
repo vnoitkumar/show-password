@@ -1,16 +1,18 @@
+var toggle = 0;
 chrome.browserAction.onClicked.addListener(function(tab) {
-    toggle = !toggle;
-    console.log('onClicked');
-    if (toggle) {
+
+    if (!toggle) {
+        toggle = 1;
         chrome.browserAction.setIcon({
-            path: "icon-16X16.png" // Show
+            path: "show-icon-16X16.png" // Show
         });
         chrome.tabs.executeScript(null, {
             file: "show_password.js"
         });
     } else {
+        toggle = 0;
         chrome.browserAction.setIcon({
-            path: "icon-16X16.png" // Hide
+            path: "hide-icon-16X16.png" // Hide
         });
         chrome.tabs.executeScript(null, {
             file: "hide_password.js"
