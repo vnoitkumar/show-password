@@ -7,7 +7,7 @@
     "browser_action": {
         "name" : "Show Password",
         "default_title": "Show Password",
-        "default_icon": "app-icon-16X16.png"
+        "default_icon": "img/app-icon-16X16.png"
     },
     "background":{ "scripts":[ "browser_action.js" ] },
     "permissions": [ "activeTab" ]
