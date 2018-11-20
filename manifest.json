@@ -1,16 +1,23 @@
 {
-  "name": "Show Password",
-  "short_name": "Show Password",
-  "description": "Show password when clicking the extension icon and hides when you click it again",
-  "version": "1.0",
-  "manifest_version": 2,
-  "browser_action": {
     "name": "Show Password",
-    "default_title": "Show Password",
-    "default_icon": "img/app-icon-16X16.png"
-  },
-  "background": {
-    "scripts": ["browser_action.js"]
-  },
-  "permissions": ["activeTab"]
+    "description": "Show password when clicking the extension icon",
+    "version": "1.0.1",
+    "manifest_version": 2,
+    "icons": {
+        "16": "img/app-icon-16X16.png",
+        "128": "img/app-icon-128X128.png"
+    },
+    "browser_action": {
+        "name": "Show Password",
+        "default_title": "Show Password",
+        "default_icon": "img/app-icon-16X16.png"
+    },
+    "background": {
+        "scripts": [
+            "browser_action.js"
+        ]
+    },
+    "permissions": [
+        "activeTab"
+    ]
 }
